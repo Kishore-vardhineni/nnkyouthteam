@@ -1,0 +1,55 @@
+<div>
+    <app-navigationmenu></app-navigationmenu>
+</div>
+<div class="card">
+    <div class="container mt-3">
+        <h1 class="container-text">{{ title }}</h1>
+        <div class="row">
+            <div class="col-lg-6 mt-5">
+                <p>{{ paragraph1 }}</p>
+                <p>{{ paragraph2 }}</p>
+            </div>
+            <div class="col-lg-6 mt-5">
+                <video width="500" height="250" controls>
+                    <source src="assets/videos/Introduction to Angular 2.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h4 class="container-text">{{ title2 }}</h4>
+        <div class="row">
+            <div class="col-lg-4 mt-5 mb-3">
+                <div class="fa-icon"> 
+                    <span class="fa-icon-position">
+                        <i class="fab fa-pagelines fa-lg"></i>
+                    </span>
+                </div>
+                <h3 class="text-align mt-3">{{ processing }}</h3>
+                <p class="mt-3" [ngStyle]="{'letter-spacing': '1px'}">{{ processingPara }} </p>
+            </div>
+            <div class="col-lg-4 mt-5 mb-3">
+                <div class="fa-icon">
+                    <span class="fa-icon-position">
+                        <i class="fas fa-rupee-sign fa-lg"></i>
+                    </span>
+                </div>
+                <h3 class="text-align mt-3">{{ price }}</h3>
+                <p class="mt-3" [ngStyle]="{'letter-spacing': '1px'}">{{ pricePara }}</p>
+            </div>
+            <div class="col-lg-4 mt-5 mb-3">
+                <div class="fa-icon">
+                    <span class="fa-icon-position">
+                    <i class="fas fa-arrows-alt fa-lg"></i>
+                </span>
+                </div>
+               
+                <h3 class="text-align mt-3">{{ accesssibility }}</h3>
+                <p class="mt-3" [ngStyle]="{'letter-spacing': '1px'}">{{ accesssibilityPara }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,68 @@
+
+.card {
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  }
+  
+.container-head {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav-brand {
+    font-style: italic;
+}
+
+  a:hover {
+    background: orange;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+ }
+
+ .menu-list a {
+     display: block;
+     padding: 15px 15px;
+     text-decoration: none;
+     text-align: center;
+ }
+
+ .menu-list a:hover {
+    background-color: orange;
+}
+ 
+ #tooltip {
+    position: relative;
+ }
+
+ .tooltiptext {
+    position: absolute;
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    text-align: center;
+    z-index: 1;
+    top: 45px;
+    left: -10px;
+ }
+
+ #tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+
+ #tooltip:hover .tooltiptext {
+     visibility: visible;
+ }

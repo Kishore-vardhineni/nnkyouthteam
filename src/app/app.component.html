@@ -1,0 +1,81 @@
+<div class="card">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#" class="nav-brand">N.N.K YOUTH</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav menu-list">
+        <li class="nav-item active">
+          <a routerLinkActive="active" routerLink="home" id="tooltip">{{ homeNavTitle }}
+            <span class="tooltiptext">{{ homeNavTitle }}</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLinkActive="active" routerLink="aboutus" id="tooltip">{{ aboutusNavTitle }}
+              <span class="tooltiptext">{{ aboutusNavTitle }}</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLinkActive="active" routerLink="images" id="tooltip">{{ imageNavTitle }}
+            <span class="tooltiptext">{{ imageNavTitle }}</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLinkActive="active" routerLink="team" id="tooltip">{{ teamNavTitle }}
+            <span class="tooltiptext">{{ teamNavTitle }}</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLinkActive="active" routerLink="videos" id="tooltip">{{ videosNavTitle }}
+            <span class="tooltiptext">{{ videosNavTitle }}</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLinkActive="active" routerLink="recognition" id="tooltip">{{ recognitionsNavTitle }}
+            <span class="tooltiptext">{{ recognitionsNavTitle }}</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLinkActive="active" routerLink="contact" id="tooltip">{{ contactNavTitle }}
+            <span class="tooltiptext">{{ contactNavTitle }}</span>
+          </a>
+        </li>
+
+        <!-- <li class="nav-item dropdown">
+          <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action"><img src="https://www.tutorialrepublic.com/examples/images/avatar/3.jpg" class="avatar" alt="Avatar"> Antonio Moreno <b class="caret"></b></a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a>
+            <a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a>
+            <a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a>
+            <div class="divider dropdown-divider"></div>
+            <a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a>
+          </div>
+        </li> -->
+  
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" routerLinkActive="active" routerLink="login" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ loginNavTitle }}
+            <span class="tooltiptext">{{ loginNavTitle }}</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" *ngIf="!navbarMenu">
+            <a class="dropdown-item" routerLinkActive="active" routerLink="myprofile">MyProfile</a>
+            <a class="dropdown-item" routerLinkActive="active" routerLink="logout">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+</div>
+
+<router-outlet></router-outlet>
+
+<div class="card">
+  <app-footer></app-footer>
+</div>

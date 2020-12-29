@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="login-model-center">
+       <div class="card">
+          <div class="login-modal">
+            <div class="row">
+              <label style="font-size: 25px;">Login</label>
+            </div>
+            <div class="row">
+              <!-- <div class="card-icons">
+                  <i class="fa fa-facebook-official" aria-hidden="true"></i>
+              </div> -->
+              <a>
+                  <button type="button" class="facebook-account">Facebook</button>
+              </a>&nbsp;&nbsp;&nbsp;
+              <a>
+                  <button type="button" class="facebook-account">Google</button>
+              </a>
+            </div>
+            <hr />
+            <div class="col-xs-12">
+              <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                  <div class="form-group">
+                      <label><b>Email Id / Username</b></label>
+                      <input class="form-control" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="Enter Email ID / Username" type="text">
+                      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                          <div *ngIf="f.email.errors.required">Email is required</div>
+                          <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                      </div>               
+                  </div>
+                  <div class="form-group">
+                      <label><b>Password</b></label>
+                      <input class="form-control" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Enter Password" type="password">
+                      <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                          <div *ngIf="f.password.errors.required">Email and password invalid.</div>
+                      </div>   
+                  </div>
+                  <div style="text-align: right;">
+                      <a href="#">Forgot Password?</a>
+                  </div>
+                  <div class="form-group mt-3">
+                      <button class="btn btn-primary" style="width: 100%;">Login</button>
+                  </div>
+                  <div style="text-align: center;">
+                      <span>New User?</span>&nbsp;&nbsp;
+                      <a routerLink="../register">Register New User</a>
+                  </div>
+              </form>
+            </div>          
+          </div>
+       </div>
+    </div>
+  </div>

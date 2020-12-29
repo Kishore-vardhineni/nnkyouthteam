@@ -1,0 +1,32 @@
+<div class="manage-address-padding">
+    <h6>Manage Addresses</h6>
+    <div class="address-add mt-3">
+      <span>+</span>&nbsp;&nbsp;&nbsp;
+      <a routerLinkActive="active" routerLink="addnew-address" >ADD NEW ADDRESS</a>
+        <router-outlet></router-outlet>
+    </div>
+    <div style="border: 1px solid black; margin-top: 25px; padding: 10px;">
+        <table>
+            <tr>
+                <h6>Full Name:</h6>
+                <td>{{ loggedInUser.lastName }} {{ loggedInUser.firstName }} <br/></td>
+            </tr>
+            <tr>
+                <h6>Address:</h6>
+                <td>{{ loggedInUser.address }}</td>
+            </tr>
+            <tr>
+                <h6>Phone Number:</h6>
+                <td>{{ loggedInUser.mobileNumber }}</td>
+            </tr>
+            <tr>
+                <a href="#">Edit</a> 
+            </tr>
+        </table>
+    </div>
+</div>
+
+<form>
+    <label>Full Name</label>
+    <input type="text" placeholder="full name">
+</form>

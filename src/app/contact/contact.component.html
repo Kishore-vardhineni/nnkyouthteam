@@ -1,0 +1,107 @@
+<div class="card">
+    <div class="container mb-3">
+        <div [ngClass]="'child-container'">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- <a routerLink="/add-contact">Add Product</a> -->
+        <h1 class="contact-text mt-3" translate>{{ contactUs }}</h1>
+        <!-- <select class="form-control" #selectedLang (change)="switchLang(selectedLang.value)">
+            <option *ngFor="let language of translate.getLangs()" [value]="language"
+              [selected]="language === translate.currentLang">
+              {{ language }}
+            </option>
+          </select> -->
+
+        <!-- <button (click)="switchLanguage('en')">English</button>
+        <button (click)="switchLanguage('tl')">Telugu</button> -->
+
+        <div class="row">
+            <div class="col-lg-4 col-xs-12 mt-3">
+                <div class="fa-icon">
+                    <span class="fa-icon-position">
+                        <i class="fas fa-home fa-lg"></i>
+                    </span>
+                </div>
+                <h4 class="text-align mt-4">{{ visitUs }}</h4>
+                <p class="text-align">{{ address }}</p>
+            </div>
+            <div class="col-lg-4 mt-3">
+                <div class="fa-icon">
+                    <span class="fa-icon-position">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </div>
+                <h4 class="text-align mt-3">{{ mailUs }}</h4>
+                <p class="text-align">{{ email }}</p>
+            </div>
+            <div class="col-lg-4 mt-3">
+                <div class="fa-icon">
+                    <span class="fa-icon-position">
+                        <i class="fas fa-phone-alt"></i>
+                    </span>
+                </div>
+                <h4 class="text-align mt-3">{{ contact }}</h4>
+                <p class="text-align">{{ phone }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7">
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit();">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" formControlName="firstName" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" placeholder="First Name" />
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" formControlName="lastName"
+                            [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" placeholder="Last Name">
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" formControlName="email"
+                            [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="Email">
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobilenumber">Mobile Number</label>
+                        <input type="text" class="form-control" formControlName="mobileNumber"
+                            [ngClass]="{ 'is-invalid': submitted && f.mobileNumber.errors }"
+                            placeholder="Mobile Number">
+                        <div *ngIf="submitted && f.mobileNumber.errors" class="invalid-feedback">
+                            <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required</div>
+                            <div *ngIf="f.mobileNumber.errors.minlength">Mobilenumber must be at least 10 digits</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Message">Message</label>
+                        <textarea class="form-control" formControlName="message"
+                            [ngClass]="{ 'is-invalid': submitted && f.message.errors }"
+                            placeholder="Message"></textarea>
+                        <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
+                            <div *ngIf="f.message.errors.required">Message is required</div>
+                            <div *ngIf="f.message.errors.maxlength">Message must be at least 50 characters</div>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.342458695261!2d78.41168631444053!3d17.49115838801648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91b8deee623f%3A0xd45c2bdbdc9b3f4d!2sJaguar+Gym!5e0!3m2!1sen!2sin!4v1534247535757"
+                width="800" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>

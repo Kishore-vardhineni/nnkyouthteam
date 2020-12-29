@@ -1,0 +1,24 @@
+<div class="footer">
+    <h1 class="footer-text">{{ footerText }}</h1>
+    <div>
+       <h6 class="address">
+           <span>
+               <i class="fas fa-map-marker-alt"></i>
+               {{ address}}
+           </span>
+        </h6>
+        <h6 class="address">
+            <span>
+                <i class="fas fa-phone-alt"></i>
+                <label>Mobile Number:</label>
+                +{{ countryCode }} {{ mobileNumber }},
+                <label>Email:</label>
+                <i class="fas fa-envelope"></i>
+                {{ email }}
+            </span>
+        </h6>
+    </div>
+    <div>
+        <p class="address">{{ copyRights }}</p>
+    </div>
+</div>

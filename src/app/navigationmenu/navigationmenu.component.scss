@@ -1,0 +1,61 @@
+.container-head {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.image-slider-1 {
+    //background-image: url('../../assets/travellerphoto.jpg');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: var(--main-text-align);
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+
+.image-slider-2 {
+   // background-image: url('../../assets/jalapalemprabha.jpg');
+    background-repeat: no-repeat;
+    background-position: var(--main-text-align);
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+
+.image-slider-3 {
+   // background-image: url('../../assets/teamtarak.jpg');
+    background-repeat: no-repeat;
+    background-position: var(--main-text-align);
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+
+.image-slider-4 {
+   // background-image: url('../../assets/teamtarak1.jpg');
+    background-repeat: no-repeat;
+    background-position: var(--main-text-align);
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+
+.image-description {
+    text-align: var(--main-text-align);
+    color: var(--main-text-color);
+    position: absolute;
+    top: 233px;
+    left: 230px;
+}
+
+.partner-with-us {
+    background: none;
+    border: 2px solid #ccc;
+    color: var(--main-text-color);
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-top: 25px;
+    padding: 10px 35px;
+    text-transform: uppercase;
+ }
